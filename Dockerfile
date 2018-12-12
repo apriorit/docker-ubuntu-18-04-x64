@@ -9,6 +9,5 @@ RUN apt-get update && apt-get upgrade -y \
 libguestfs-dev libedit-dev libc6-dev-x32 libelf-dev \
 snapd git autoconf \
 linux-headers-4.15.0-42 linux-image-4.15.0-42-generic \
-linux-headers-4.18.0-1004-gcp linux-image-4.18.0-1004-gcp
-
-RUN rm -rf /var/lib/apt/lists/* /var/cache/apt/*
+linux-headers-4.18.0-1004-gcp linux-image-4.18.0-1004-gcp && \
+ rm -rf /var/lib/apt/lists/* /var/cache/apt/*
