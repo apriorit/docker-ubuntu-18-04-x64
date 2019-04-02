@@ -4,8 +4,10 @@ MAINTAINER Stovba Volodymyr <netpanik@apriorit.com>
 
 ENV DEBIAN_FRONTEND noninteractive
 
-RUN apt-get update && apt-get upgrade -y \
-&& apt-get install -y bison++ libprocps-dev libxalan-c-dev \
+#uncomment all src repositories
+RUN sed -i -- 's/#deb-src/deb-src/g' /etc/apt/sources.list && sed -i -- 's/# deb-src/deb-src/g' /etc/apt/sources.list
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y bison++ libprocps-dev libxalan-c-dev \
 libxerces-c-dev libnl-3-dev subversion libcrypto++-dev libpcre++-dev \
 uuid-dev libsnappy-dev build-essential libboost-all-dev cmake maven libicu-dev \
 zlib1g-dev liblog4cpp5-dev libncurses5-dev libselinux1-dev wget libsqlite3-dev google-mock \
