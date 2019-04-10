@@ -13,3 +13,16 @@ uuid-dev libsnappy-dev build-essential libboost-all-dev cmake maven libicu-dev \
 zlib1g-dev liblog4cpp5-dev libncurses5-dev libselinux1-dev wget libsqlite3-dev google-mock \
 libvirt-dev libmysqlclient-dev qtbase5-dev qtdeclarative5-dev libblkid-dev giblib-dev libimlib2-dev \
 libglib2.0-dev libgtk-3-dev libcanberra-gtk3-dev jq libssl1.0-dev
+
+
+#Install MS ODBC Driver and Libraries
+RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
+#Ubuntu 18.04
+curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
+RUN apt-get update 
+RUN ACCEPT_EULA=Y apt-get install -y msodbcsql17
+
+# optional: for bcp and sqlcmd
+RUN ACCEPT_EULA=Y apt-get install -y mssql-tools
+# optional: for unixODBC development headers
+RUN apt-get -y install unixodbc-dev
