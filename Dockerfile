@@ -5,7 +5,7 @@ RUN apt update && apt upgrade -y && \
     \
     apt-add-repository -y -u ppa:ubuntu-toolchain-r/test && \
     apt update && \
-    apt install -y gcc-8 g++-8 git \
+    apt install -y gcc-8 g++-8 git ssh \
     \
     wget \
     autoconf \
