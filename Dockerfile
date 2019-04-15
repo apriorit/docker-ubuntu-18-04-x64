@@ -32,7 +32,7 @@ RUN apt update && apt upgrade -y && \
     chmod +x cmake-3.14.0-Linux-x86_64.sh  && \
     ./cmake-3.14.0-Linux-x86_64.sh --skip-license --prefix=/usr && \
     \
-    apt -y remove wget && apt -y autoremove && apt -y autoclean && \
+    apt -y remove wget && \
     \
     rm -f /tmp/cmake-3.14.0-Linux-x86_64.sh && \
     rm -rf /var/lib/apt/lists/*
