@@ -26,6 +26,7 @@ RUN apt update && apt upgrade -y && \
     \
     python3 -m pip install --upgrade pip && \
     python3 -m pip install conan  && \
+    python3 -m pip install --upgrade requests \
     \
     wget -O /tmp/cmake-3.14.0-Linux-x86_64.sh https://github.com/Kitware/CMake/releases/download/v3.14.0/cmake-3.14.0-Linux-x86_64.sh && \
     cd /tmp  && \
