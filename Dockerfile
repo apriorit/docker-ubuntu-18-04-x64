@@ -25,8 +25,7 @@ RUN apt update && apt upgrade -y && \
     update-alternatives --set g++ /usr/bin/g++-8 && \
     \
     python3 -m pip install --upgrade pip && \
-    python3 -m pip install conan  && \
-    python3 -m pip install --upgrade requests && \
+    python3 -m pip install --upgrade conan && \
     \
     wget -O /tmp/cmake-3.14.0-Linux-x86_64.sh https://github.com/Kitware/CMake/releases/download/v3.14.0/cmake-3.14.0-Linux-x86_64.sh && \
     cd /tmp  && \
