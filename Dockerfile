@@ -33,7 +33,6 @@ RUN apt update && apt upgrade -y && \
     ./cmake-3.14.0-Linux-x86_64.sh --skip-license --prefix=/usr && \
     \
     apt-mark hold python3-requests && \
-    apt -y remove wget && apt -y autoremove && apt -y autoclean && \
     \
     rm -f /tmp/cmake-3.14.0-Linux-x86_64.sh && \
     rm -rf /var/lib/apt/lists/*
