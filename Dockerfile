@@ -12,7 +12,7 @@ libxerces-c-dev libnl-3-dev subversion libcrypto++-dev libpcre++-dev \
 uuid-dev libsnappy-dev build-essential libboost-all-dev cmake maven libicu-dev \
 zlib1g-dev liblog4cpp5-dev libncurses5-dev libselinux1-dev wget libsqlite3-dev google-mock \
 libvirt-dev libmysqlclient-dev qtbase5-dev qtdeclarative5-dev libblkid-dev giblib-dev libimlib2-dev \
-libglib2.0-dev libgtk-3-dev libcanberra-gtk3-dev jq libssl1.0-dev unzip postgresql-client
+libglib2.0-dev libgtk-3-dev libcanberra-gtk3-dev jq libssl1.0-dev unzip postgresql-client git
 
 
 #Install MS ODBC Driver and Libraries
