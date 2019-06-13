@@ -29,3 +29,7 @@ RUN apt-get -y install unixodbc-dev
 
 #Install postgres odbc and replace relative path by full path to odbc driver (fix not found odbc driver error)
 RUN apt-get -y install odbc-postgresql && sed -i 's/psqlodbcw.so/\/usr\/lib\/x86_64-linux-gnu\/odbc\/psqlodbcw.so/g' /etc/odbcinst.ini
+
+# poco
+RUN cd /tmp && git clone -b "poco-1.9.0" https://github.com/pocoproject/poco.git && cd poco/ && mkdir cmake-build && cd cmake-build && cmake .. && cmake --build . && make DESTDIR=/opt/apriorit-poco all install 
+
