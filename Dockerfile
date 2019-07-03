@@ -14,6 +14,8 @@ zlib1g-dev liblog4cpp5-dev libncurses5-dev libselinux1-dev wget libsqlite3-dev g
 libvirt-dev libmysqlclient-dev qtbase5-dev qtdeclarative5-dev libblkid-dev giblib-dev libimlib2-dev \
 libglib2.0-dev libgtk-3-dev libcanberra-gtk3-dev jq libssl1.0-dev unzip postgresql-client git
 
+RUN apt-get install -y libgtest-dev
+RUN cd /usr/src/gtest/ && cmake . && make && cp *.a /usr/lib
 
 #Install MS ODBC Driver and Libraries
 RUN curl https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
