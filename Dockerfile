@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update && apt-get upgrade -y \
 && apt-get install -y libssl-dev libcrypto++-dev uuid-dev libsnappy-dev build-essential cmake \
-libguestfs-dev libedit-dev libc6-dev-x32 libelf-dev libx11-dev\
+libguestfs-dev libedit-dev libc6-dev-x32 libelf-dev libx11-dev \
 snapd git autoconf \
 linux-headers-4.15.0-42 linux-image-4.15.0-42-generic \
 linux-headers-4.18.0-1004-gcp linux-image-4.18.0-1004-gcp
