@@ -11,6 +11,7 @@ RUN apt update && apt upgrade -y && \
     libreadline-dev \
     liblua5.3-dev \
     libmysqlcppconn-dev \
+    libx11-dev \
     \
     python3 \
     python3-pip && \
